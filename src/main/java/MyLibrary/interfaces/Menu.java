@@ -1,9 +1,12 @@
 package MyLibrary.interfaces;
 
+import MyLibrary.database.CustomerService;
+
 import java.util.Scanner;
 
 public class Menu {
 
+    CustomerService customerService = new CustomerService();
     public void menuApp() {
         int option;
         try (Scanner parser = new Scanner(System.in)) {
@@ -13,6 +16,7 @@ public class Menu {
                 switch(option) {
                     case 1:
                         System.out.println("Register user");
+                        customerService.createCustomer();
                         break;
                     case 2:
                         System.out.println("User list");
