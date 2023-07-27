@@ -1,8 +1,32 @@
 package MyLibrary.database;
 
-public class CustomerService {
-    public static void createCustomer() {
+import MyLibrary.models.UserModel;
 
+import java.util.Scanner;
+
+public class CustomerService {
+    static Scanner parser = new Scanner(System.in);
+    public static void createCustomer() {
+        System.out.println("ID");
+        int id = parser.nextInt();
+        System.out.println("Doc type");
+        int doc_type = parser.nextInt();
+        System.out.println("Name");
+        String name = parser.next();
+        System.out.println("Surname");
+        String surname = parser.next();
+        System.out.println("Email");
+        String email = parser.next();
+        System.out.println("Program");
+        String program = parser.next();
+
+        UserModel user = new UserModel();
+        user.setDoc_id(id);
+        user.setDoc_type(doc_type);
+        user.setName(name);
+        user.setSurname(surname);
+        user.setEmail(email);
+        user.setProgram(program);
     }
 
     public static void getCustomer() {
