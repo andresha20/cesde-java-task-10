@@ -27,6 +27,7 @@ public class CustomerService {
         user.setSurname(surname);
         user.setEmail(email);
         user.setProgram(program);
+        CustomerDAO.createCustomerDB(user);
     }
 
     public static void getCustomer() {
