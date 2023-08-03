@@ -7,12 +7,12 @@ public class UserModel {
     private int doc_id;
     private String email;
     private String program;
-    private int doc_type;
+    private String doc_type;
 
     public UserModel() {
 
     }
-    public UserModel(String name, String surname, String email, String program, int doc_id, int doc_type) {
+    public UserModel(String name, String surname, String email, String program, int doc_id, String doc_type) {
         this.name = name;
         this.surname = surname;
         this.doc_id = doc_id;
@@ -61,11 +61,11 @@ public class UserModel {
         this.program = program;
     }
 
-    public int getDoc_type() {
+    public String getDoc_type() {
         return doc_type;
     }
 
-    public void setDoc_type(int doc_type) {
+    public void setDoc_type(String doc_type) {
         this.doc_type = doc_type;
     }
 }

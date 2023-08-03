@@ -10,7 +10,7 @@ public class CustomerService {
         System.out.println("ID");
         int id = parser.nextInt();
         System.out.println("Doc type");
-        int doc_type = parser.nextInt();
+        String doc_type = parser.next();
         System.out.println("Name");
         String name = parser.next();
         System.out.println("Surname");
@@ -31,7 +31,7 @@ public class CustomerService {
     }
 
     public static void getCustomer() {
-
+        CustomerDAO.getCustomerDB();
     }
 
     public static void updateCustomer() {
